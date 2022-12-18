@@ -14,126 +14,159 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link href="./css/style.css" rel="stylesheet">
+   <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+      <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="./css/map.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/mapschoolScript.js" defer></script>
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/overzicht.html">Overzicht</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pharma.html">Pharma</a></li>
-                  <li><a class="dropdown-item active" aria-current="page" href="/onderwijs.html">Onderwijs</a></li>
-                  <li><a class="dropdown-item" href="/industrie.html">Industrie</a></li>
-                  <li><a class="dropdown-item" href="/transport.html">Transport</a></li>
-                  <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
-                  <li><a class="dropdown-item" href="/space.html">Space</a></li>
-                </ul>
-              <li class="nav-item">
-                <a class="nav-link" href="/faq.html">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
   <header>
+    <nav class="navbar bg-light fixed-top">
+      <section class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <section class="offcanvas-header">
+            <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </section>
+          <section class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/overzicht.html">Overzicht</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pharma.html">Pharma</a></li>
+                    <li><a class="dropdown-item active" aria-current="page" href="/onderwijs.html">Onderwijs</a></li>
+                    <li><a class="dropdown-item" href="/industrie.html">Industrie</a></li>
+                    <li><a class="dropdown-item" href="/transport.html">Transport</a></li>
+                    <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
+                    <li><a class="dropdown-item" href="/space.html">Space</a></li>
+                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="/reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </section>
+        </section>
+      </section>
+    </nav>
   </header>
   <main>
-    <div class="container mt-5">
-      <div class="row">
-        <section class="col-md-12">
-          <article class="section-header text-center pb-5">
-            <p>&nbsp;</p>
-            <h2 class="blauw">Onderwijs</h2>
-            <p>Dit is de onderwijs-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
-            <hr>
-            <dl class="list-group">
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs1">Leren werken met robots</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs2">kinderen en robots</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs3">Robots helpen in het onderwijs</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs4">Video</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs5">in tabel</a></dt>
-            </dl>
-          </article>
-        </section>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-9 col-lg-12">
-          <section id="onderwijs1">
-            <article>
-              <h2 class="blauw">Internet Of Things in het onderwijs</h2>
-              <figure>
-                <img src="/images/stock-photo-teen-girl-in-robotics-laboratory-school-class-1853453071.jpg" class="figure-img img-fluid" alt="">
-              </figure>
-              <figcaption class="figure-caption blauw">Leren werken met robots</figcaption>
-              <p>&nbsp;</p>
-              <p>IT is de toekomst, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor animi fugit ipsam optio molestiae nobis quasi eaque beatae, consequatur at aperiam exercitationem laborum mollitia qui. Accusantium odit aliquam ipsam cupiditate.</p>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore distinctio atque culpa alias, dicta veritatis reiciendis sit doloribus neque tempore non necessitatibus sint, quod voluptate mollitia possimus similique blanditiis ratione quia hic, animi officia dolores. Tenetur corporis fugiat labore quam incidunt tempore vitae, nulla consectetur ducimus, voluptatem consequuntur vel animi iste assumenda soluta aliquid expedita tempora harum obcaecati provident magni! Quam, laudantium amet distinctio repudiandae facilis odit! Eum soluta numquam magnam obcaecati, debitis laborum hic explicabo voluptatibus ullam maiores nisi inventore illum sed animi incidunt! Dignissimos dolore optio quae nulla, aspernatur error tempora modi suscipit iste esse. Similique ab ipsa numquam, unde expedita laboriosam iste optio modi dignissimos quas sequi quam hic assumenda magni. Officia, repellat similique fugit vel provident explicabo repudiandae amet sapiente quasi facere. Id harum nostrum similique tempora non! Voluptate, quas fugit possimus magnam accusantium blanditiis quod eos, eligendi quae sunt pariatur repudiandae, iusto placeat asperiores similique corporis dicta. Laudantium hic magni veritatis voluptas ea tempore, delectus earum alias autem unde, reiciendis possimus iusto iure dolores consectetur vero blanditiis vitae aut libero ducimus molestias deserunt! Sunt laborum sapiente corrupti placeat voluptates beatae exercitationem rerum facilis, nisi odit maxime nam? Veritatis fugit vel iste. Repellat, vitae ducimus?</p>
+    <section class="container mt-5">
+      <section class="row col-md-12">
+        <article class="section-header text-center">
+          <p>&nbsp;</p>
+          <h2 class="blauw">Onderwijs</h2>
+          <p>Dit is de onderwijs-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
+          <hr>
+          <dl class="list-group">
+            <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs1">Leren werken met robots</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs2">kinderen en robots</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs3">Robots helpen in het onderwijs</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs4">Video</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs5">In tabel</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#map">Kaart</a></dt>
+          </dl>
+          <hr>
+        </article>
+      </section>
+      <section class="row ">
+        <section class="col-12 col-md-12 col-lg-12 ">
+          <section id="onderwijs1" class="container section-padding">
+            <section class="row pt-4 pb-4">
+              
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Internet Of Things in het onderwijs</h2>
+                <article>
+                  <p>IT is de toekomst, daarom is het belangrijk dat we ook investeren in onze toekomst. Dat doen we doen door kinderen al spelend kennis te laten maken.</p>
+                  <p>&nbsp;</p>
+                  <p>Jongeren leren robotics te gebruiken in hun dagelijkse door ze taken te laten uitvoeren zodat zij dat niet meer hoefen te doen enzo hen meer tijd kan bieden voor andere dingen. Op deze manier worden jongeren gemotiveerd om aan robotica te werken. Ze leren bijvoorbeeld hoe ze een robotarm inelkaar zetten en hoe ze die moeten programmeren om bijvoorbeeld een blikje of een flesje vast te houden. De mogelijkheden zijn oneindig en dat maakt het juist leuk om te doen.</p>
+                </article>
+              </section>
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="/images/stock-photo-teen-girl-in-robotics-laboratory-school-class-1853453071.jpg" class="figure-img img-fluid" alt="tiener meisje en robots">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Leren werken met robots</figcaption>
+                  </figure>
+                </article>
+              </section>
               <hr>
-            </article>
+            </section>            
           </section>
-          <section id="onderwijs2">
-            <article>
-              <h2></h2>
-              <figure>
-                <img src="images/stock-photo-nice-optimistic-smart-boy-testing-his-robotic-device-while-beign-involved-in-engineering-classes-1213293736.jpg" class="figure-img img-fluid" alt="">
-                <figcaption class="figure-caption blauw">kinderen en robots</figcaption>
-              </figure>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque omnis aliquid explicabo deleniti quam praesentium quod itaque accusamus sit facere iusto quaerat fuga voluptatibus dolorum, nihil vitae ducimus sed iure?</p>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quos quis sint illo libero saepe dolor accusamus cumque vero ut eos excepturi minima accusantium, fugiat qui repellat dolorem quibusdam autem. Voluptatibus fugiat quis alias reiciendis culpa quibusdam atque iusto autem, tempore distinctio delectus esse aut consectetur eveniet quia vero deserunt, expedita aliquid quasi mollitia velit corrupti voluptate placeat? Aperiam facere sit deleniti incidunt. Sequi, eos! Id omnis, placeat dolorem in quas aliquam sint impedit labore rerum ut ipsa eum sequi autem doloribus commodi saepe repellat dolores quidem amet ab dignissimos animi fuga. Iure magnam similique quidem omnis dolor explicabo aperiam laborum maiores laboriosam facilis, quasi vel, adipisci eaque dicta deleniti excepturi porro ipsum. Non ex aperiam, voluptas dignissimos distinctio esse odio maiores voluptates quas alias corrupti quis, in ratione repudiandae aspernatur? Placeat esse eligendi similique tempore in sapiente autem dignissimos nostrum accusamus, voluptatibus rerum nemo cupiditate inventore doloribus repellendus expedita, dolore perspiciatis quod hic. Reprehenderit tenetur voluptates quos eveniet, repellat adipisci quas magni praesentium rerum, perferendis deleniti sit sint quis laudantium iusto dignissimos mollitia quod temporibus laboriosam veritatis distinctio! Consectetur maiores vel obcaecati a architecto, repudiandae aliquam iusto? Similique non culpa quod aut neque quo reiciendis fugit nulla, cumque ipsum?</p>
+          <section id="onderwijs2" class="container section-padding">
+            <section class="row pb-4">
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="images/stock-photo-nice-optimistic-smart-boy-testing-his-robotic-device-while-beign-involved-in-engineering-classes-1213293736.jpg" class="figure-img img-fluid" alt="jongen en robots">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ kinderen en robots</figcaption>
+                  </figure>
+                </article>
+              </section> 
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <article>
+                  <h2 class="blauw">Al spelend leren</h2>
+                  <p>Kinderen hebben de capaciteit om op jonge leeftijd veel te informatie te kunnen verwerken. Daarom is het niet slecht om jongeren al vanaf jongere leeftijd al te stimuleren in programmeren en het bouwen van robots. Je kan dit met hun op een leuke speelse manier doen waardoor het niet zo saai is.</p>
+                  <p>&nbsp;</p>
+                  <p>Vele bedrijven snappen dit concept en werken hier ook bewust aan mee. Zoals het bedrijf <span>LEGO</span> dat auto's maakt in miniatuur maar die de zelfde mechanics bevatten als de echte wagens. Je kan deze dan ook programmeren zodat je hun gedrag en snelheid kan instellen. Op deze manier leren de kinderen op een speelse manier hoe je blokjes code moet schrijven of goe een motor van een auto werkt. En zo hebben ze er later veel minder problemen mee als ze ermee incontact komen. Natuurlijk is <span>LEGO</span> niet het enige bedrijf dat dit doet en zijn er tal van andere bedrijven die hierop inspringen.</p>
+                </article>         
+              </section>
               <hr>
-            </article>
+            </section>
           </section>
-          <section id="onderwijs3">
-            <article>
-              <h2></h2>
-              <figure>
-                <img src="/images/stock-photo-november-minsk-belarus-stem-education-lego-boost-robot-vernie-robotics-class-for-child-761938474.jpg" class="figure-img img-fluid" alt="">
-                <figcaption class="figure-caption blauw">Robots helpen in het onderwijs</figcaption>
-              </figure>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aut voluptatem, aliquid repellendus excepturi ipsa corporis modi ducimus! Quam esse voluptate sed expedita nostrum dignissimos. Officia possimus iusto commodi fugit.</p>
-              <p>&nbsp;</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque possimus voluptatibus accusantium eius veniam excepturi, numquam, aliquam obcaecati odio alias suscipit ex quia esse animi provident delectus? Debitis minima deleniti aliquid reprehenderit maxime blanditiis, sunt dicta quaerat fuga officia est harum tenetur distinctio similique, architecto mollitia ipsa expedita praesentium? Soluta tenetur illum perferendis non voluptatum asperiores. Reiciendis in autem magni omnis, at ullam id vel itaque atque repellat nobis voluptas tempora voluptatem provident perferendis explicabo, doloribus, eligendi debitis! Quibusdam, aperiam blanditiis, soluta laudantium ab vitae atque doloremque architecto, et natus saepe reprehenderit! Quam aliquam corrupti obcaecati ipsam laboriosam nobis quaerat consequuntur temporibus incidunt, dolor quae recusandae, doloremque debitis sunt minima nostrum vero. Libero sequi enim, maxime mollitia aperiam quam impedit corrupti nemo quae! Quasi ullam maiores at quisquam reiciendis fuga veritatis, itaque quaerat deleniti quibusdam atque praesentium. Iure officiis provident et, laborum accusantium culpa fuga tempore recusandae veniam saepe architecto iste eos numquam inventore rerum dolorum modi autem blanditiis? Quam excepturi, quod eveniet perspiciatis eum dolorum, a nostrum fuga necessitatibus veniam aperiam obcaecati, eius ex ipsa delectus repudiandae illo quae reiciendis non assumenda ad sint enim nisi? Eius, ipsam! Odit maxime ut earum nemo, tempore repellat ea corporis in debitis.</p>
-              <hr>
-            </article>
-          </section>
+          <section id="onderwijs3" class="container section-padding">
+            <section class="row pb-4">
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Kinderen werken samen met hun StudyBuddy</h2>
+                <article>
+                  <p>Docenten hebben enorm veel werk, dat weet iedereen, daarom hebben ze robots ontwikkeld die helpen bij het onderwijzen van de kinderen. Dit zou de docenten meer moeten ontlasten en de kwaliteit van de studie verbeteren.</p>
+                  <p>&nbsp;</p>
+                  <p>Kinderen krijgen in de klas een <span><q><q>StudyBuddy</q></q></span> die en helpt met de les te begrijpen als zij vragen hebben. ook helpen ze met taken. Ze gaan de taken niet maken voor de kinderen maar ze kunnen hier hun vraag stellen en dan krijgen ze van de robot een gepaste uitleg. Op deze manier kunnen kinderen die anders geen vraag durven stellen, toch hun vraag nog kunnen stellen aan de robot. Zo kan er ook bijgehouden worden waar een leerling problemen heeft en kan de docent daar waar nodig is beter op insturen omdat ze dan een beter overzicht hebben van wat de leerling al wel en niet kent. Het bied veel voordelen en we zullen zien wat de toekomst nog in petto heeft!</p>
+                </article>
+              </section>
+              <section class="col-lg-4 col-md-6 col-12 mb-3 ">
+                <article>
+                  <figure>
+                    <img src="/images/stock-photo-november-minsk-belarus-stem-education-lego-boost-robot-vernie-robotics-class-for-child-761938474.jpg" class="figure-img img-fluid" alt="robots-onderwijs">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Robots helpen in het onderwijs</figcaption>
+                  </figure>
+                </article>
+              </section><hr>
+            </section>
+          </section>          
           <section id="onderwijs4">
             <article>
-              <div class="iframe-container screen">
+              <section class="iframe-container screen">
                 <iframe style="aspect-ratio: 16/9;" width="100%" height="auto" src="https://www.youtube.com/embed/GOocptluqNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture container-fluid" allowfullscreen></iframe>
-              </div>
+              </section>
+              <p>&nbsp;</p>
               <hr>
             </article>
           </section>
-          <section id="onderwijs5">
+          <section id="onderwijs5" class="pt-4">
             <article>
               <table class="table bg-dark text-primary caption-bottom">
                 <caption>functie tabel</caption>
@@ -166,11 +199,25 @@
               </table>
             </article>
           </section>
-        </div>
-      </div> 
-    </div>
+          <hr>
+          <section id="map" class="container row m-0 col-md-12 p-0 pb-4 pt-4">      
+            <!-- in de amazonMap zal er via Leaflet een map ingeladen worden -->
+            <section id="apMap" class="col-md-12 p-0 pb-4">
+            </section>
+          </section>
+          <hr>
+        </section>
+        <dl>
+        <article class="text-center">
+          <h3><a href="#top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+            <p class="text-white">Back to Top</p>
+          </a></h3>
+        </article>
+      </section>
+    </section>
   </main>
   <aside></aside>
-  <footer class="container-fluid text-center h6 small p-4 blauw fixed-botom">&copy; 2023 4"CAPS"</footer>
+  <footer class="text-center h6 small p-4 blauw fixed-botom">&copy;2023 Stefan Cap G_1IOT_D1</footer>
 </body>
 </html>

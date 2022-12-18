@@ -1,4 +1,4 @@
-let apMap = L.map('apMap').setView([51.23009, 4.41616], 17);
+let apMap = L.map('apMap').setView([50.84371279443512, 4.38667360230544], 17);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -8,9 +8,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(apMap);
 
 // bepaal de rechthoek rondom het gebouw van AP
-let bounds = [[51.23041, 4.4155], [51.22991, 4.41675]];
+let bounds = [[50.84371279443512, 4.38667360230544], [50.84371279443512, 4.38667360230544]];
 // kleur de rechthoek in met de blauwe 4CAPS-kleur
 L.rectangle(bounds, {color: "#0f78e8", weight: 1}).addTo(apMap);
-// plaats een marker met als tekst "IOT bedrijf 4CAPS" en eronder "Ellermanstraat 33"
-let apMarker = L.marker([51.23009, 4.41616]).addTo(apMap);
-apMarker.bindPopup("<b>IOT bedrijf 4CAPS</b><br>Ellermanstraat 33").openPopup();
+// plaats een marker met als tekst "EuropeanSpaceAgency" en eronder "Avenue de Cortenbergh 52"
+let apMarker = L.marker([50.84371279443512, 4.38667360230544]).addTo(apMap);
+apMarker.bindPopup("<span><b>EuropeanSpaceAgency</b></span><br>Avenue de Cortenbergh 52").openPopup();
+

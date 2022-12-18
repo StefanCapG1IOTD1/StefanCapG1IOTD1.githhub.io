@@ -13,4 +13,4 @@ let bounds = [[51.23041, 4.4155], [51.22991, 4.41675]];
 L.rectangle(bounds, {color: "#0f78e8", weight: 1}).addTo(apMap);
 // plaats een marker met als tekst "IOT bedrijf 4CAPS" en eronder "Ellermanstraat 33"
 let apMarker = L.marker([51.23009, 4.41616]).addTo(apMap);
-apMarker.bindPopup("<b>IOT bedrijf 4CAPS</b><br>Ellermanstraat 33").openPopup();
+apMarker.bindPopup("<span><b>AP Hogeschool Antwerpen</b></span><br>Ellermanstraat 33").openPopup();

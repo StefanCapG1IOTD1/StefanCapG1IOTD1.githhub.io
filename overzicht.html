@@ -16,29 +16,28 @@
   <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/overzicht.html">Overzicht</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Topics
-              </a>                
+  <header>
+    <nav class="navbar bg-light fixed-top">
+      <section class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <section class="offcanvas-header">
+            <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </section>
+          <section class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/overzicht.html">Overzicht</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/pharma.html">Pharma</a></li>
                   <li><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></li>
@@ -47,319 +46,329 @@
                   <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
                   <li><a class="dropdown-item" href="/space.html">Space</a></li>
                 </ul>
-              <li class="nav-item">
-                <a class="nav-link" href="/faq.html">FAQ</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <header>
-    <h1 class="mt-5"></h1>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </section>
+        </section>
+      </section>
+    </nav>
   </header>
-  <section id="projecten" class="projecten section-padding">
-    <div class="container mt-5 mb-5">
-      <div class="row">
-        <section class="col-md-12">
-          <article class="section-header text-center pb-5">
-            <p>&nbsp;</p>
-            <h2 class="blauw">Overzicht</h2>
-            <p>Dit is de overzicht pagina van <span><strong>4"CAPS"</strong></span>. Hier kan je snel en gemakkelijk een overzicht vinden van de verschillende topics.<br><strong>Veel plezier!</strong></p>
-            <hr>
-            <dl class="list-group">
-              <dt><a class="list-group-item bg-dark text-primary" href="#pharma">pharma</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs">onderwijs</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#industrie">industrie</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#transport">transport</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#archeologie">archeologie</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#space">space</a></dt>
-            </dl>
-          </article>
+  <main>
+    <section id="projecten" class="projecten section-padding">
+      <section class="container mt-5 mb-3">
+        <section class="row">
+          <section class="col-md-12">
+            <article class="section-header text-center pb-5">
+              <p>&nbsp;</p>
+              <h2 class="blauw">Overzicht</h2>
+              <p>Dit is de overzicht pagina van <span><strong>4"CAPS"</strong></span>. Hier kan je snel en gemakkelijk een overzicht vinden van de verschillende topics.<br><strong>Veel plezier!</strong></p>
+              <hr>
+              <dl class="list-group">
+                <dt><a class="list-group-item bg-dark text-primary" href="#pharma">pharma</a></dt>
+                <dt><a class="list-group-item bg-dark text-primary" href="#onderwijs">onderwijs</a></dt>
+                <dt><a class="list-group-item bg-dark text-primary" href="#industrie">industrie</a></dt>
+                <dt><a class="list-group-item bg-dark text-primary" href="#transport">transport</a></dt>
+                <dt><a class="list-group-item bg-dark text-primary" href="#archeologie">archeologie</a></dt>
+                <dt><a class="list-group-item bg-dark text-primary" href="#space">space</a></dt>
+              </dl>
+              <hr>
+            </article>
+          </section>
         </section>
-      </div>
-      <div class="row">
-        <section class="col-12 col-md-12 col-lg-4 mb-3" id="pharma">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-laboratory-d-illustration-407687677.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Een laboratium van de toekomst</figcaption>
-                </figure>
+        <section class="row">
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="pharma">
+            <section class="card text-light text-center bg-white pb-2">
+              <section class="card-body text-dark">
+                <article class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-laboratory-d-illustration-407687677.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Een laboratium van de toekomst</figcaption>
+                  </figure>
+                </article>
+                <h3 class="card-title blauw">Pharma</h3>
+                <p>Een futuristisch laboratorium</p>
+                <p><a href="pharma.html#pharma1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
+              </section>
+            </section>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <section class="card text-light text-center bg-white pb-2">
+              <section class="card-body text-dark">
+                <article class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-humanoid-robot-with-a-stethoscope-hud-and-empty-hexagons-d-illustration-1339377515 (1).jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robotdokter met een stethoscoop</figcaption>
+                  </figure>
+                </article>
+                <h3 class="card-title blauw">Pharma</h3>
+                <p>Dokter van de toekomst?</p>
+                <p><a href="pharma.html#pharma2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
+              </section>
+            </section>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo--d-rendering-robotic-hand-holding-test-tube-with-green-fuorecent-liqud-big-pahrma-virus-cure-1672433680 (1).jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robotarm met groene vloeistof</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Pharma</h3>
+                <p>Robotarm met vloeistoffen</p>
+                <p><a href="pharma.html#pharma3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Pharma</h3>
-              <p>Een futuristisch laboratorium</p>
-              <p><a href="pharma.html#pharma1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-humanoid-robot-with-a-stethoscope-hud-and-empty-hexagons-d-illustration-1339377515 (1).jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Robot met stethoscoop</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="onderwijs">
+            <article class="card text-light text-center bg-white pb-2">
+              <section class="card-body text-dark">
+                <section class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-teen-girl-in-robotics-laboratory-school-class-1853453071.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Tiener meisje werkt met robotische arm</figcaption>
+                  </figure>
+                </section>
+                <h3 class="card-title blauw">Onderwijs</h3>
+                <p>Leren werken met robots</p>
+                <p><a href="onderwijs.html#onderwijs1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
+              </section>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-nice-optimistic-smart-boy-testing-his-robotic-device-while-beign-involved-in-engineering-classes-1213293736.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Jongen test zijn robot en leert zo robotics</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Onderwijs</h3>
+                <p>Kinderen en robots</p>
+                <p><a href="onderwijs.html#onderwijs2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Pharma</h3>
-              <p>Dokter van de toekomst?</p>
-              <p><a href="pharma.html#pharma2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo--d-rendering-robotic-hand-holding-test-tube-with-green-fuorecent-liqud-big-pahrma-virus-cure-1672433680 (1).jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Robotarm met groene vloeistof</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-november-minsk-belarus-stem-education-lego-boost-robot-vernie-robotics-class-for-child-761938474.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Een robot die een boek vasthoudt</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Onderwijs</h3>
+                <p>Robots helpen in het onderwijs</p>
+                <p><a href="onderwijs.html#onderwijs3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Pharma</h3>
-              <p>Robotarm met vloeistoffen</p>
-              <p><a href="pharma.html#pharma3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3" id="onderwijs">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-teen-girl-in-robotics-laboratory-school-class-1853453071.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Tiener meisje werkt met robotische arm</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="industrie">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-robots-efficiently-sorting-hundreds-of-parcels-per-hour-automated-guided-vehicle-agv-d-rendering-1845336538.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Volledige automatisatie met robots</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Industrie</h3>
+                <p>Autonome drones</p>
+                <p><a href="industrie.html#industrie1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Onderwijs</h3>
-              <p>Leren werken met robots</p>
-              <p><a href="onderwijs.html#onderwijs1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-nice-optimistic-smart-boy-testing-his-robotic-device-while-beign-involved-in-engineering-classes-1213293736.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Slimme jonge test zijn robot en leert zo engineering</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-industrial-welding-robots-in-production-line-manufacturer-factory-467541443.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robotische las-armen</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Industrie</h3>
+                <p>Robot las-armen</p>
+                <p><a href="industrie.html#industrie2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Onderwijs</h3>
-              <p>Kinderen en robots</p>
-              <p><a href="onderwijs.html#onderwijs2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
             </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-november-minsk-belarus-stem-education-lego-boost-robot-vernie-robotics-class-for-child-761938474.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Een robot die een boek vasthoudt</figcaption>
-                </figure>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+             <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                   <img src="/images/stock-photo-the-robot-arm-picks-up-the-box-to-autonomous-robot-transportation-in-warehouses-warehouse-1908818611.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robotarm die dozen van drones haalt</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Industrie</h3>
+                <p>Robots in een magazijn</p>
+                <p><a href="industrie.html#industrie3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Onderwijs</h3>
-              <p>Robots helpen in het onderwijs</p>
-              <p><a href="onderwijs.html#onderwijs3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3" id="industrie">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-robots-efficiently-sorting-hundreds-of-parcels-per-hour-automated-guided-vehicle-agv-d-rendering-1845336538.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Volledige autonome Automatisatie met rijdende robots</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="transport">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                 <figure class="figure">
+                    <img src="/images/moving-delivery-robots-on-road-600w-1932642725.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Drones die bestelling leveren of ophalen</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Transport</h3>
+                <p>Transport met IOT</p>
+                <p><a href="transport.html#transport1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Industrie</h3>
-              <p>Autonome drones</p>
-              <p><a href="industrie.html#industrie1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <div class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-industrial-welding-robots-in-production-line-manufacturer-factory-467541443.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Robotische las-armen</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-food-delivery-drone-autonomous-delivery-robot-business-air-transportation-concept-d-illustration-2092101130.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Een drone dat eten levert</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Transport</h3>
+                <p>Drones die voeding leveren</p>
+                <p><a href="transport.html#transport2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Industrie</h3>
-              <p>Robot las-armen</p>
-              <p><a href="industrie.html#industrie2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </div>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-the-robot-arm-picks-up-the-box-to-autonomous-robot-transportation-in-warehouses-warehouse-1908818611.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Robotarm die dozen van drones haalt</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-gacha-self-driving-shuttle-bus-for-all-weather-conditions-offering-smart-safe-and-sustainable-on-1439952869.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Drone vliegt met bestelling in magazijn</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Transport</h3>
+                <p>Drone dat pakketjes rondbrengt</p>
+                <p><a href="transport.html#transport3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Industrie</h3>
-              <p>Robots in een magazijn</p>
-              <p><a href="industrie.html#industrie3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3" id="transport">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-moving-delivery-robots-on-the-road-cyber-couriers-are-cruising-the-sidewalks-in-estonia-copy-1932642725.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Rijdende drones die bestelling leveren of ophalen</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="archeologie">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-search-and-rescue-robot-unit-isolated-on-white-background-with-clipping-path-388465186.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robot met camera's, sensoren en rupsbanden</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Archeologie</h3>
+                <p>rijdende robot met sensoren</p>
+                <p><a href="archeologie.html#archeologie1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Transport</h3>
-              <p>Transport met IOT</p>
-              <p><a href="transport.html#transport1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-food-delivery-drone-autonomous-delivery-robot-business-air-transportation-concept-d-illustration-2092101130.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Een drone dat eten levert</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-remote-operated-vehicle-1235775016.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Autonome robot onderzeeër aan het duiken</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Archeologie</h3>
+                <p>Autonome robot onderzeeër</p>
+                <p><a href="archeologie.html#archeologie2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Transport</h3>
-              <p>Drones die helpen met het leveren van voeding</p>
-              <p><a href="transport.html#transport2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-spare-part-delivery-drone-at-garage-storage-in-leading-automotive-car-service-center-for-delivering-1489541270.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Drone vliegt rond met bestelling in magazijn</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-high-tech-robot-dog-with-lidars-sensors-optics-computers-cameras-screen-with-running-software-2233202611.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Robothond met Liadar, camera's en sensoren</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Archeologie</h3>
+                <p>Robothond met Liadar en sensoren</p>
+                <p><a href="archeologie.html#archeologie3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Transport</h3>
-              <p>Drone dat pakketjes rondbrengt</p>
-              <p><a href="transport.html#transport3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3" id="archeologie">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-search-and-rescue-robot-unit-isolated-on-white-background-with-clipping-path-388465186.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">zoekrobot met camera's, sensoren en rupsbanden</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3" id="space">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/nasa-OLlj17tUZnU-unsplash.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Astronaut in space ondehoud een satteliet</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Space</h3>
+                <p>Astronaut en satteliet in de ruimte</p>
+                <p><a href="space.html#space1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Archeologie</h3>
-              <p>rijdende robot met sensoren</p>
-              <p><a href="archeologie.html#archeologie1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-remote-operated-vehicle-1235775016.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Autonome robot onderzeeër aan het duiken</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-landing-of-mars-rover-on-surface-of-red-planet-elements-of-this-image-furnished-by-nasa-1940276641.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Marsrover land op Mars</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Space</h3>
+                <p>Marsrover aan het landen</p>
+                <p><a href="space.html#space2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Archeologie</h3>
-              <p>Autonome robot onderzeeër</p>
-              <p><a href="archeologie.html#archeologie2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-high-tech-robot-dog-with-lidars-sensors-optics-computers-cameras-screen-with-running-software-2233202611.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Robothond uitgerust met Liadar, camera's en sensoren</figcaption>
-                </figure>
+            </article>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 mb-3">
+            <article class="card text-light text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <figure class="figure">
+                    <img src="/images/stock-photo-mars-explores-the-surface-of-the-planet-elements-of-this-image-were-furnished-by-nasa-for-any-1487449580.jpg" class="figure-img img-fluid overzicht" alt="">
+                    <figcaption class="figure-caption">Marsrover op Mars die stalen neemt</figcaption>
+                  </figure>
+                </div>
+                <h3 class="card-title blauw">Space</h3>
+                <p>Satteliet die boven de aarde orbit</p>
+                <p><a href="space.html#space3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
               </div>
-              <h3 class="card-title blauw">Archeologie</h3>
-              <p>Robothond uitgerust met Liadar en sensoren</p>
-              <p><a href="archeologie.html#archeologie3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
+            </article>
+          </section>
+          <p>&nbsp;</p>
+          <hr>
         </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2" id="space">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/nasa-OLlj17tUZnU-unsplash.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Astronaut doet ondehoud aan een satteliet in de ruimte</figcaption>
-                </figure>
-              </div>
-              <h3 class="card-title blauw">Space</h3>
-              <p>Astronaut en satteliet in de ruimte</p>
-              <p><a href="space.html#space1" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-landing-of-mars-rover-on-surface-of-red-planet-elements-of-this-image-furnished-by-nasa-1940276641.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Marsrover land op Mars</figcaption>
-                </figure>
-              </div>
-              <h3 class="card-title blauw">Space</h3>
-              <p>Marsrover aan het landen</p>
-              <p><a href="space.html#space2" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-        <section class="col-12 col-md-12 col-lg-4 mb-3">
-          <article class="card text-light text-center bg-white pb-2">
-            <div class="card-body text-dark">
-              <div class="img-area mb-4">
-                <figure class="figure">
-                  <img src="/images/stock-photo-a-satellite-is-above-the-earth-and-is-orbiting-the-planet-there-is-a-white-blue-glow-from-the-sun-58719544.jpg" class="figure-img img-fluid overzicht" alt="">
-                  <figcaption class="figure-caption">Satteliet in orbit boven de aarde</figcaption>
-                </figure>
-              </div>
-              <h3 class="card-title blauw">Space</h3>
-              <p>Satteliet die boven de aarde orbit</p>
-              <p><a href="space.html#space3" class="btn btn-primary btn-lg btn-block mt-3">Lees meer</a></p>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-  </section>
+        <article class="text-center">
+          <h3><a href="#top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+            <p class="text-white">Back to Top</p>
+          </a></h3>
+        </article>
+      </section>
+    </section>
+  </main>
   <aside></aside>
-  <footer class="container-fluid text-center h6 small p-4 blauw fixed-botom">&copy; 2023 4"CAPS"</footer>
+  <footer class="text-center h6 small p-4 blauw fixed-botom">&copy;2023 Stefan Cap G_1IOT_D1</footer>
 </body>
 </html>

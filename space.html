@@ -14,127 +14,162 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link href="./css/style.css" rel="stylesheet">
+       <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+      <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="./css/map.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/mapesaScript.js" defer></script>
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/overzicht.html">Overzicht</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
-                <dl class="dropdown-menu">
-                  <dt><a class="dropdown-item" href="/pharma.html">Pharma</a></dt>
-                  <dt><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></dt>
-                  <dt><a class="dropdown-item" href="/industrie.html">Industrie</a></dt>
-                  <dt><a class="dropdown-item" href="/transport.html">Transport</a></dt>
-                  <dt><a class="dropdown-item" href="/archeologie.html">Archeologie</a></dt>
-                  <dt><a class="dropdown-item active" aria-current="page" href="/space.html">Space</a></dt>
-                </dl>
+  <header>
+    <nav class="navbar bg-light fixed-top">
+      <section class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <section class="offcanvas-header">
+            <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </section>
+          <section class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="/faq.html">FAQ</a>
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/overzicht.html">Overzicht</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/pharma.html">Pharma</a></li>
+                  <li><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></li>
+                  <li><a class="dropdown-item" href="/industrie.html">Industrie</a></li>
+                  <li><a class="dropdown-item" href="/transport.html">Transport</a></li>
+                  <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
+                  <li><a class="dropdown-item active" aria-current="page" href="/space.html">Space</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/reviews.html">Reviews</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/contact.html">Contact</a>
               </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <header>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </section>
+        </section>
+      </section>
+    </nav>
   </header>
   <main>
-    <div class="container mt-5">
-      <div class="row">
-        <section class="col-md-12">
-          <article class="section-header text-center pb-5">
-            <p>&nbsp;</p>
-            <h2 class="blauw">Space</h2>
-            <p>Dit is de space-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
-            <hr>
-            <dl class="list-group">
-              <dt><a class="list-group-item bg-dark text-primary" href="#space1">Astronaut en satteliet in de ruimte</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#space2">Marsrover aan het landen</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#space3">Satteliet die boven de aarde orbit</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#space4">Video</a></dt>
-              <dt><a class="list-group-item bg-dark text-primary" href="#space5">In tabel</a></dt>
-            </dl>
-          </article>
+    <section class="container mt-5">
+      <section class="row col-md-12">
+        <section class="section-header text-center">
+          <p>&nbsp;</p>
+          <h2 class="blauw">Space</h2>
+          <p>Dit is de space-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
+          <hr>
+          <dl class="list-group">
+            <dt><a class="list-group-item bg-dark text-primary" href="#space1">Astronaut en satteliet in de ruimte</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#space2">Marsrover aan het landen</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#space3">Satteliet die boven de aarde orbit</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#space4">Video</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#space5">In tabel</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#map">Map</a></dt>
+          </dl>
+          <hr>
         </section>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-9 col-lg-12">
-          <section id="space1">
-            <article>
-              <h2 class="blauw">Internet Of Things in space</h2>
-              <figure>
-                <img src="/images/nasa-OLlj17tUZnU-unsplash.jpg" class="figure-img img-fluid" alt="">
-                <figcaption class="figure-caption blauw">Astronaut en satteliet in de ruimte</figcaption>
-              </figure>
-              <p>&nbsp;</p>
-              <p>IT is de toekomst, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor animi fugit ipsam optio molestiae nobis quasi eaque beatae, consequatur at aperiam exercitationem laborum mollitia qui. Accusantium odit aliquam ipsam cupiditate.</p>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, ut libero exercitationem minima hic, cum corrupti beatae nostrum, a eos obcaecati veritatis non fugiat esse. Unde ratione modi error saepe vitae, corrupti quisquam, ipsum nemo voluptatem ducimus sed doloremque. Consequuntur itaque expedita pariatur alias error ad quaerat recusandae dolore nisi ex. Harum unde quidem non laborum placeat dicta cupiditate. Totam, tempore sequi, rerum deleniti id tenetur inventore vitae praesentium hic quasi quaerat maiores. Explicabo numquam esse dolores excepturi vitae, repudiandae tenetur provident? Aliquam eum libero ipsam exercitationem saepe vero commodi, vel mollitia rem, praesentium laudantium unde, quod labore ea quis ratione ad qui cupiditate dicta? Accusamus asperiores sequi dolores quibusdam consequuntur aut possimus mollitia aspernatur eius harum voluptatum provident delectus a autem distinctio voluptatem doloribus minima dolore, iste quam quod ipsam praesentium? Repellendus natus in dolor, cupiditate molestiae magni dolore voluptatem! Laudantium corrupti obcaecati rem dicta ex quia distinctio ipsum modi officia laboriosam itaque, harum eum nam porro eos, suscipit, reiciendis maxime hic sapiente recusandae enim. Maxime laboriosam minima reiciendis alias porro ullam tempore id incidunt qui. Iusto, distinctio ipsa molestiae explicabo officiis est cupiditate a adipisci quod repellendus sapiente soluta maxime fugiat aliquid necessitatibus. Tempora sapiente unde distinctio consectetur?</p>
+      </section>
+      <section class="row col-12 col-md-12 col col-lg-12">
+          <section id="space1" class="container section-padding">
+            <section class="row pt-4">              
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Internet Of Things in space</h2>
+                <article>
+                  <p>Al sinds wanneer wij als mens instaat waren om sattelieten rondom onze aarde te laten orbitten, is <span>IOT</span> hier een groot onderdeel van. Satteliete moete vanop afstand bestuurbaar zijn zodat deze op veilige afstand van de aarde blijven.</p>
+                  <p>&nbsp;</p>
+                  <p>En wat daarvoor zorgt zijn allemaal individuelen processen da naadloos op elkaar volgen. Er moet vanuit de ruimte date verzamelend worden om namelijk te weten wat de positie van deze satteliet is. Die data moet dus eerst nog gemaakt worden door allerlei verschillende toestelllen. Alle data wordt in de satteliet verzamelt en wordt op zijn buurt doorgezonden naar de <span>aarde</span>. Op die manier kunnen wij zien of de satteliet op koers ligt of deze misschien moet bijgestuurd worden door de stuwrakketen (perslucht) die aanwezig is in de satteliet. Zo is het mogelijk om een satteliet onbemand achter te laten en te laten funtioneren in de ruimte op afstand. Daarom is het Belangrijk dat deze geregeld onderhouden worden en dat moet spijtig nog manueel gebeuren. Misschien dat er daar ook nog iets op zullen vinden, wie weet.</p>
+                </article>
+              </section>
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="/images/nasa-OLlj17tUZnU-unsplash.jpg" class="figure-img img-fluid" alt="">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Astronaut en satteliet in de ruimte</figcaption>
+                  </figure>
+                </article>
+              </section>
               <hr>
-            </article>
+            </section>
           </section>
-          <section id="space2">
-            <article>
-              <h2></h2>
-              <figure>
-                <img src="images/stock-photo-landing-of-mars-rover-on-surface-of-red-planet-elements-of-this-image-furnished-by-nasa-1940276641.jpg" class="figure-img img-fluid" alt="">
-                <figcaption class="figure-caption blauw">Marsrover aan het landen</figcaption>
-              </figure>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque omnis aliquid explicabo deleniti quam praesentium quod itaque accusamus sit facere iusto quaerat fuga voluptatibus dolorum, nihil vitae ducimus sed iure?</p>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum perspiciatis exercitationem hic architecto commodi quaerat sapiente repellat optio, aut tempora doloribus dolorem explicabo, laborum magni ipsam natus voluptatibus culpa. Officia nisi vel consequuntur ab inventore est eos soluta corporis similique tempora cupiditate eveniet ipsum, distinctio, reprehenderit unde. Illo voluptatem ipsum accusantium explicabo libero tempora fugit voluptatibus at, hic illum magni quae id? Magnam natus ipsum odit ea doloribus. Fugiat unde tenetur ab aperiam adipisci perspiciatis et, libero, animi recusandae totam quo voluptates, optio architecto? Distinctio aspernatur quia, esse numquam minima asperiores vitae maxime magni necessitatibus tempore ipsum quos, aliquam aperiam corrupti sapiente sunt velit veniam quasi a, tenetur accusantium quas. Maxime ab aspernatur, illo exercitationem officia ex quia vel amet praesentium. Sapiente porro dignissimos accusamus minima blanditiis commodi minus eos aliquam dolorum a. Aliquam eum quas quisquam adipisci ipsa ipsam dolores veniam atque provident eius maiores non iste accusamus quo error libero repellat voluptas incidunt, ea, nulla illo. Natus culpa qui id esse? Sapiente quos quisquam deleniti asperiores saepe eligendi dolor doloribus quas nemo error ea dolorum, inventore non. Temporibus quidem, similique quo possimus suscipit ratione incidunt ex nobis tempore rerum vel perspiciatis cupiditate beatae quae optio aperiam facere magni!</p>
+          <section id="space2" class="container section-padding">
+            <section class="row pt-4">
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="images/stock-photo-landing-of-mars-rover-on-surface-of-red-planet-elements-of-this-image-furnished-by-nasa-1940276641.jpg" class="figure-img img-fluid" alt="">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Marsrover aan het landen</figcaption>
+                  </figure>
+                </article>
+              </section>
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Transport in de ruimte</h2>              
+                <article>
+                  <p>Om onze apparatruren op andere planeten te krijgen zijn hier ook de nodige transportrmiddelen voor nodig. Daarom zijn ruimtevaartorganisaties zoals <span>NASA</span>, <span>SpaceX</span> en <span>ESA</span> massaal bezig met  te bouwen van rakket om ons en hun materiaal naar en terug van een planeet te transporteren.</p>
+                  <p>&nbsp;</p>
+                  <p>Bij ruimteontdekkingen is het belangrijk dat wij transportmiddelen hebben die we kunnen blijven gebruiken. Nu bij lanceringen van rakket hebben al vooruitgang geboekt op dat vlak en zijn wij instaat een rakket te laten landen en terug te laten vertrekken en dat allemaal vanop een veilige afstand. Vroeger was dit onmogelijk maar door de laatste ontwikkelingen zijn wij instaat om alles autonoom te laten verlopen. Het zou mooi zijn als wij de planeet al <span><q><q>gebruiksklaar</q></q></span> kunnen maken vooraleer er ooit maar een mens voet heeft gezet op die planeet.</p>
+                </article>
+              </section>
               <hr>
-            </article>
+            </section>
           </section>
-          <section id="space3">
-            <article>
-              <h2></h2>
-              <figure>
-                <img src="/images/stock-photo-a-satellite-is-above-the-earth-and-is-orbiting-the-planet-there-is-a-white-blue-glow-from-the-sun-58719544.jpg" class="figure-img img-fluid" alt="">
-                <figcaption class="figure-caption blauw">Satteliet die boven de aarde orbit</figcaption>
-              </figure>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aut voluptatem, aliquid repellendus excepturi ipsa corporis modi ducimus! Quam esse voluptate sed expedita nostrum dignissimos. Officia possimus iusto commodi fugit.</p>
-              <p>&nbsp;</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea minus nihil repellendus eos tempora voluptatem a vel sequi consequuntur, ratione veritatis aliquid, dignissimos aperiam. Molestias nulla ducimus, quaerat animi non, aperiam similique officiis doloremque eum obcaecati eaque dolorem earum aliquam temporibus ab omnis? Velit aliquam facere eius error rerum, vel quia eveniet cum odio reiciendis officiis ducimus ea quisquam? Consequatur totam deleniti qui amet temporibus ipsa tempore suscipit quaerat minima eveniet, aut exercitationem ipsum eaque recusandae quasi expedita quibusdam tempora, molestiae saepe porro mollitia unde dolore. Error vitae cupiditate facilis! Consectetur, culpa placeat voluptatum sed repudiandae perspiciatis aliquam pariatur eius atque reprehenderit id doloribus cupiditate rem laudantium doloremque expedita nisi distinctio veniam quaerat maiores quisquam itaque commodi modi. Enim aperiam dolore blanditiis corporis numquam? Voluptatibus pariatur, omnis quidem exercitationem harum culpa architecto debitis vitae aspernatur illo cum possimus incidunt rerum rem cupiditate ipsa dolore! Nesciunt exercitationem officia animi explicabo excepturi vitae nisi. Ad error quos minima suscipit alias rerum fugit, consequuntur illo, ducimus molestiae quasi nobis optio eum delectus ipsa. Expedita ad ipsa hic quasi, harum reiciendis cum corrupti exercitationem incidunt vitae odio voluptate perferendis dolor natus atque commodi. Cum distinctio reiciendis dolores similique sapiente architecto facilis suscipit provident eaque?</p>
-              <hr>
-            </article>
+          <section id="space3" class="container section-padding">
+            <section class="row pt-4">
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Marsrover neemt stalen op mars opzoek naar leven</h2>             
+              
+                <article>              
+                  <p>We kennen allemaal onze beroemde <span>Marsrover</span> die voor ons al een zeer lange tijd de planeet Mars bestudeerd. Dit leuke robotje lijkt op Wall-e, de  <span><q><q>Disney</q></q></span>-broer van onze Marsrover.</p>
+                  <p>&nbsp;</p>
+                  <p>Jaren lang maakte deze voor ons foto's en video van de Red Giant in onze Melkweg. Hij heeft onze kennis van de planeet flink vooruit geholpen en hielp ons al enorm naar de zoektocht naar buitenaards leven. Hij is uitegrust met camera's, boren en nog allerlei apparaten zodat deze robot zoveel mogelijk <span>autonoom</span> tewerk kan gaan. Spijtig genoeg is zij, tot op de dag van vandaag, nog niet geslaagd in het vinden van leven op Mars. Wel heeft deze robot tal van andere dingen ontdekt zoals grondstoffen die bij ons vreemd zijn of fenomenen die men soms als <span><q><q>buitenaardse activiteiten</q></q></span> kan worden beschouwd. Meestal was hier altijd een verklaarbare uitleg voor maar wat als deze kleine jongen eens op iets stoot dat de mens niet kan verklaren?</p>
+                </article>
+              </section>
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="/images/stock-photo-mars-explores-the-surface-of-the-planet-elements-of-this-image-were-furnished-by-nasa-for-any-1487449580.jpg" class="figure-img img-fluid" alt="">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Satteliet die boven de aarde orbit</figcaption>
+                  </figure>
+                </article>
+              </section><hr>
+            </section>
           </section>
-          <section id="space4">
+          <section id="space4" class="container section-padding">
             <article>
+              <p>&nbsp;</p>
               <div class="iframe-container screen">
                 <iframe style="aspect-ratio: 16/9;" width="100%" height="auto" src="https://www.youtube.com/embed/nvkTYr39G8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture container-fluid" allowfullscreen></iframe>
               </div>
+              <p>&nbsp;</p>
               <hr>
             </article>
           </section>
-          <section id="space5">
+          <section id="space5" class="container section-padding">
             <article>
+              <p>&nbsp;</p>
               <table class="table bg-dark text-primary caption-bottom">
                 <caption>functie tabel</caption>
                 <thead>
@@ -159,18 +194,30 @@
                   </tr>
                   <tr>
                     <th>&nbsp;</th>
-                    <td>2022</td>
-                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos quod labore sunt, iste temporibus repellendus at id blanditiis est dolor vel esse exercitationem magni nobis unde dignissimos quisquam ullam aperiam.</td>
+                    <td>sattelieten</td>
+                    <td>Sattelieten helpen ons met het navigeren en bestuderen van de aarde en de ruimte. Om dit goed te laten verlopen zijn er veel processen aan de gang die ervoor zorgen dat deze in zijn baan rondom de aarde blijft enzo verder onze melkweg bestuurd.</td>
                   </tr>
                 </tbody>
               </table>
             </article>
+            <hr>
           </section>
-        </div>
-      </div> 
-    </div>
+          <section id="map" class="container row m-0 col-md-12 p-0 pb-4 pt-4">      
+            <!-- in de amazonMap zal er via Leaflet een map ingeladen worden -->
+            <div id="apMap" class="col-md-12 p-0 pb-4">
+            </div>
+          </section>
+          <hr>
+      </section>
+      <article class="text-center">
+          <h3><a href="#top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+            <p class="text-white">Back to Top</p>
+          </a></h3>
+      </article>
+    </section> 
   </main>
   <aside></aside>
-  <footer class="container-fluid text-center h6 small p-4 blauw fixed-botom">&copy; 2023 4"CAPS"</footer>
+  <footer class="text-center h6 small p-4 blauw fixed-botom">&copy;2023 Stefan Cap G_1IOT_D1</footer>
 </body>
 </html>

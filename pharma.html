@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma</title>
+    <title>farma</title>
       <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -14,127 +14,154 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link href="./css/style.css" rel="stylesheet">
+       <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+      <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="./css/map.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="./js/mapesaScript.js" defer></script>
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"href="/overzicht.html">Overzicht</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
-                <dl class="dropdown-menu">
-                  <dt><a class="dropdown-item active" aria-current="page" href="/pharma.html">Pharma</a></dt>
-                  <dt><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></dt>
-                  <dt><a class="dropdown-item" href="/industrie.html">Industrie</a></dt>
-                  <dt><a class="dropdown-item" href="/transport.html">Transport</a></dt>
-                  <dt><a class="dropdown-item" href="/archeologie.html">Archeologie</a></dt>
-                  <dt><a class="dropdown-item" href="/space.html">Space</a></dt>
-                </dl>
+  <header>
+    <nav class="navbar bg-light fixed-top">
+      <section class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <section class="offcanvas-header">
+            <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </section>
+          <section class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="/faq.html">FAQ</a>
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/overzicht.html">Overzicht</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>                
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active" aria-current="page" href="/pharma.html">Pharma</a></li>
+                  <li><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></li>
+                  <li><a class="dropdown-item" href="/industrie.html">Industrie</a></li>
+                  <li><a class="dropdown-item" href="/transport.html">Transport</a></li>
+                  <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
+                  <li><a class="dropdown-item" href="/space.html">Space</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/reviews.html">Reviews</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/contact.html">Contact</a>
               </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-    <header>
-    </header>
-    <main>
-      <div class="container mt-5">
-        <div class="row">
-          <section class="col-md-12">
-            <article class="section-header text-center pb-5">
-              <p>&nbsp;</p>
-              <h2 class="blauw">Pharma</h2>
-              <p>Dit is de pharma-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
-              <hr>
-              <dl class="list-group">
-                <dt><a class="list-group-item bg-dark text-primary" href="#pharma1">Een futuristisch laboratorium</a></dt>
-                <dt><a class="list-group-item bg-dark text-primary" href="#pharma2">Dokter van de toekomst?</a></dt>
-                <dt><a class="list-group-item bg-dark text-primary" href="#pharma3">Robotarm met vloeistoffen</a></dt>
-                <dt><a class="list-group-item bg-dark text-primary" href="#pharma4">Video</a></dt>
-                <dt><a class="list-group-item bg-dark text-primary" href="#pharma5">In tabel</a></dt>
-              </dl>
-            </article>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </section>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-9 col-lg-12">
-            <section id="pharma1">
-              <article>
-                <h2 class="blauw">Internet Of Things In de pharmaceutica</h2>
-                <figure>
-                  <img src="/images/stock-photo-laboratory-d-illustration-407687677.jpg" class="figure-img img-fluid" alt="laboratorium" title="laboratorium">
-                  <figcaption class="figure-caption blauw">Een futuristisch laboratorium</figcaption>
-                </figure>
+        </section>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <section class="container mt-5">
+      <section class="row col-md-12">
+        <article class="section-header text-center">
+          <p>&nbsp;</p>
+          <h2 class="blauw">Farma</h2>
+          <p>Dit is de Farma-pagina van <span><strong></strong>4"CAPS"</span>. Hier kan je snel en gemakkelijk een overzicht vinden van mijn topic.<br><span><strong>Veel plezier!</strong></span></p>
+          <hr>
+          <dl class="list-group">
+            <dt><a class="list-group-item bg-dark text-primary" href="#pharma">Een futuristisch laboratorium</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#pharma2">Dokter van de toekomst?</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#pharma3">Robotarm met vloeistoffen</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#pharma4">Video</a></dt>
+            <dt><a class="list-group-item bg-dark text-primary" href="#pharma5">In tabel</a></dt>
+          </dl>
+          <hr>
+        </article>
+      </section>
+        <section class="row col-12 col-md-12 col col-lg-12">
+          <section id="pharma1" class="container section-padding">
+            <section class="row pt-4">
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="/images/stock-photo-laboratory-d-illustration-407687677.jpg" class="figure-img img-fluid" alt="laboratorium" title="laboratorium">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Een futuristisch laboratorium</figcaption>
+                  </figure>
+                </article>               
+              </section>
+              <section class="col-lg-8 col-md-6 col-12 mb-3">  
+                <h2 class="blauw">Internet Of Things in space</h2>
                 <p>&nbsp;</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ex fugit pariatur rerum tenetur quam maxime odit facilis nostrum non, tempore tempora sapiente, quisquam rem animi? Maxime deserunt animi incidunt.</p>
+                <article>
+                  <p>Stalen die de dokter afneemt moeten gecontroleerd worden of de patient heeft misschien een scan nodig. Dan zou dit kunnen in het labo van de toekomst bij de dokter zelf. Het stelt hen instaat om mensen sneller en efficienter te helpen kunnen helpen.</p>
+                  <p>Dokters moeten altijd handelen naar de diagnose die ze stellen. Als een dokter zelf testen kan uitvoeren zonder dat het onnodig veel tijd kost zou dat ten goede komen van de patient. Ze kunnen sneller en doel gerichter behandeld worden. Het labo zou je dan automatisch scannen als je op het bed zou liggen en kan zou een diagnose stellen. Ook bloedstalen zouden kunnen gecontroleerd worden en door een machine uitgelezen worden. Ook zal het systeem je medische geschiedenis kunnen raadplegen om onderliggende problemen op te sporen en je ook beter te kunnen ondersteunen bij je behandleing.</p>
+                </article>
+              </section>
+            </section><hr>
+          </section>
+          <section id="pharma2" class="container section-padding">
+            <section class="row pt-4">
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Dokter van de toekomst?</h2>              
                 <p>&nbsp;</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto voluptatibus laudantium porro sit modi non autem officiis magni sed temporibus consectetur sapiente aspernatur obcaecati perferendis necessitatibus est quo veritatis voluptate, similique minus delectus iusto assumenda. Ipsa laborum possimus eum id enim nulla saepe aut repellendus dolorum, unde accusantium non deserunt ad veniam nemo voluptas ipsum aperiam veritatis temporibus aliquid perspiciatis odit, dolore perferendis? Corrupti earum dolore eaque libero sit, quia fuga! Rerum eos sunt ducimus cum. Consectetur iusto nesciunt laudantium dolorem recusandae eos porro reprehenderit suscipit a magnam, hic harum sequi odio laborum nobis atque eum deleniti delectus. Beatae tempora minima nam, quaerat enim amet molestias! Exercitationem culpa assumenda soluta, illum voluptatem sunt mollitia perspiciatis officia ipsam, recusandae quia, minima accusantium nisi. Atque nostrum quibusdam tempora, obcaecati est aut cum delectus necessitatibus officiis velit nihil hic harum neque illo eum consequuntur laborum. Doloribus corporis numquam delectus alias quos ab eveniet aliquid voluptate maxime, nemo vel sint accusantium minima voluptatem nisi optio praesentium doloremque molestiae magnam earum, eos, vitae architecto suscipit ducimus! Animi pariatur consequuntur veritatis nulla, alias delectus? Laboriosam magnam quisquam corporis! Explicabo, temporibus! Nemo quas ipsum iste, necessitatibus est, asperiores quia quis aliquam voluptates nobis pariatur veritatis ex repudiandae?</p>
-                <hr>
-              </article>
+                <article>              
+                  <p>Dokters willen hun patienten de beste zorgen geven en daarom is het belangrijk dat zij mee zijn met de laatste operatietechnieken. Zoals robotchirurgie die de dokters ophand helpen bij operaties.</p>
+                  <p>De medische sector is één van d esectoren die het snelst vooruitgangboeken op vlak technologie. Dankzij de technologie van de dag van vandaag zijn zij instaat om delicate handelingen beter uit te voeren zodat de patient er minder last van heeft en beter hersteld. Ze zijn preciezer en nauwkeuriger dankzij de hulp van robotchirurgie. Ook protheses kunnen nu met een 3D-printer op maat gemaakt worden en worden zo ook comfortabeler voor de patiënt.</p>
+                </article>
+              </section>
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="images/stock-photo-humanoid-robot-with-a-stethoscope-hud-and-empty-hexagons-d-illustration-1339377515 (1).jpg" class="figure-img img-fluid" alt="Robot-with-stethoscope" title="Robot-with-stethoscope">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ </figcaption>
+                  </figure>
+                </article>
+              </section>
+            </section><hr>
+          </section>
+          <section id="pharma3" class="container section-padding">
+            <section class="row pb-4 pt-4">
+              <section class="col-lg-4 col-md-6 col-12 mb-3">
+                <article>
+                  <figure>
+                    <img src="/images/stock-photo--d-rendering-robotic-hand-holding-test-tube-with-green-fuorecent-liqud-big-pahrma-virus-cure-1672433680 (1).jpg" class="figure-img img-fluid" alt="">
+                    <figcaption class="figure-caption blauw">&copy;https://www.shutterstock.com/nl/ Robotarm met vloeistoffen</figcaption>
+                  </figure>
+                </article>
+              </section>
+              <section class="col-lg-8 col-md-6 col-12 mb-3">
+                <h2 class="blauw">Robots die onze medicijnen produceren</h2>              
+                <p>&nbsp;</p>
+                <article>              
+                  <p>Binnenkort zijn er minder mensen nodig bij het produceren van farmaceutische middelen dankzij multiplexiteit van de robotarmen. De armen zijn flexibel inzetbaar en kunnen omgebouwd/uitgerust worden met de nodige functies zodat zij sneller en efficienter kunnen produceren. </p>
+                  <p>Tijdens de Coronapandemie zijn heel veel mensen in het begin thuis gebleven waardoor de productie wereldwijd gedaald was en tot op de dag van vandaag zijn die gevolgen nog voelbaar. Vele bedrijven zoals de farmaceutische sector konden lang hun voorraden raadplegen maar naar maten de pandemie groeide werden producten schaarser en duurder. Daarom beginnen bedrijven over te schakelen naar andere methodes van werken. Een volledig geautomatiseerde productielijn waar minder mankracht bij nodig is en zo ook minder menselijke ongevallen zal veroorzaken. Ze hebben multifunctionele robot armen die instaat zen verschillende handlingen uit te voeren en zijn makkelijk in te bouwen of te verplaatsen op een productielijn.</p>
+                </article>
+              </section><hr>
             </section>
-            <section id="pharma2">
-              <article>
-                <h2></h2>
-                <figure>
-                  <img src="/images/stock-photo-humanoid-robot-with-a-stethoscope-hud-and-empty-hexagons-d-illustration-1339377515 (1).jpg" class="figure-img img-fluid" alt="Robot-with-stethoscope" title="Robot-with-stethoscope">
-                  <figcaption class="figure-caption blauw">Dokter van de toekomst?</figcaption>
-                </figure>
-                <figcaption></figcaption>
-                <p>&nbsp;</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sunt nisi sint voluptatem, pariatur incidunt soluta! Nemo, consequatur doloribus! Accusantium harum similique quas a. Ad officiis laboriosam modi ea autem.</p>
-                <p>&nbsp;</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quae, dolorem unde ratione assumenda quisquam molestiae quas quia similique maiores earum nisi quasi eos dolore doloremque distinctio nihil placeat laudantium natus vel enim sapiente hic autem non. Quia ad nostrum amet iure, laborum nesciunt neque, atque expedita a dolores animi debitis asperiores sapiente eligendi. Possimus et laudantium odio necessitatibus, suscipit ea maxime corrupti laborum, iste amet sunt architecto reiciendis fugiat nihil dolor culpa reprehenderit repellendus saepe explicabo quia repellat doloribus aperiam nisi! Aut modi excepturi culpa ducimus optio, magni dolorem quis id blanditiis numquam corrupti sed harum laboriosam tempore laborum soluta assumenda debitis repudiandae ad rerum. Iusto aliquid corrupti itaque ullam iste ex saepe incidunt, nihil deserunt sequi error dolorem laudantium accusantium quo voluptatibus et pariatur nam accusamus harum, a laboriosam eligendi placeat? Repellendus deleniti optio eaque, totam error ea minima dicta maxime modi neque cum sed alias voluptatibus distinctio repellat perferendis. Accusantium tempore enim labore animi vero non dicta, iste eligendi, totam laborum vitae. Itaque totam tempore quod repellendus accusantium harum minima. Excepturi quidem tempora obcaecati omnis inventore non ab mollitia. Quo, sit accusantium corrupti explicabo, aperiam, earum perspiciatis praesentium id temporibus enim voluptatum aspernatur? Totam, recusandae molestiae. Provident!</p>
-                <hr>
-            </article>
           </section>
-          <section id="pharma3">
-            <article>
-                <h2></h2>
-                <figure>
-                  <img src="/images/stock-photo--d-rendering-robotic-hand-holding-test-tube-with-green-fuorecent-liqud-big-pahrma-virus-cure-1672433680 (1).jpg" class="figure-img img-fluid" alt="Robotic-hand" title="Robotic-hand">
-                  <figcaption class="figure-caption blauw">Robotarm met vloeistoffen</figcaption>
-                </figure>
-                <p>&nbsp;</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt quasi corporis quam minus ducimus, facilis dolore, cupiditate nostrum consequuntur molestias beatae iure eos cumque voluptate distinctio vel adipisci repudiandae possimus.</p>
-                <p>&nbsp;</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi porro id molestiae quae architecto. Rerum, aliquam quis. Fuga a earum corrupti iste sunt quam natus optio culpa corporis pariatur! Veritatis autem dicta beatae earum perspiciatis vitae suscipit praesentium, facere illo. Nobis tempore, minus, eos totam, laudantium incidunt sequi vero recusandae autem repudiandae esse iste assumenda quia! Est reprehenderit asperiores minus error nesciunt incidunt. Neque delectus incidunt explicabo, sed exercitationem pariatur repellendus voluptas consectetur. Tempore deserunt eligendi ullam id expedita autem earum sunt omnis ipsa vero qui, repellat fugiat sapiente delectus nihil saepe, similique, illum inventore minus? Obcaecati voluptate enim optio harum praesentium animi, deleniti esse ut vel eos deserunt suscipit consequatur quibusdam illum impedit dolores totam repudiandae soluta nobis quas corrupti. Numquam explicabo aut ut, illo accusantium veniam facere nemo a, corrupti dicta ratione odio delectus nobis. Magnam dicta eligendi fugit inventore molestias voluptatum earum non aspernatur ab facilis, ex voluptatibus hic cumque ullam, possimus perferendis corporis voluptates temporibus aliquam odit nesciunt! Aliquam, reprehenderit. Accusamus vitae a consectetur distinctio? Necessitatibus earum vel sint veritatis praesentium quos a quae. Officia perspiciatis facilis explicabo neque ex pariatur dolorum eligendi? Doloremque, doloribus aperiam natus est temporibus unde voluptates expedita sint perferendis repellendus laboriosam.</p>
-                <hr>
-            </article>
-          </section>
-          <section id="pharma4">
+          <section id="pharma4" class="pb-4">
             <article>
               <div class="iframe-container screen">
                 <iframe style="aspect-ratio: 16/9;" width="100%" height="auto" src="https://www.youtube.com/embed/uLUfgh2sncE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture container-fluid" allowfullscreen></iframe>
-              </div>         
-              <hr>
+              </div> 
             </article>
           </section>
-          <section id="pharma5">
+          <hr>
+          <section id="pharma5" class="pt-4">
             <article>
               <table class="table bg-dark text-primary caption-bottom">
                 <caption>functie tabel</caption>
@@ -160,18 +187,24 @@
                   </tr>
                   <tr>
                     <th>&nbsp;</th>
-                    <td>robots die medicatie verdelen</td>
+                    <td>machine die medicatie verdeeld</td>
                     <td>In moderne ziekenhuizen wordt de medicatie bijgehouden door de computer en wanneer iemand medicatie nodig heeft van het personeel moeten zij hun badge scannen en de nodige supplementen aanduiden op naam van de patient. Zo worden fouten vermeden en krijgt iedereen de juiste medicatie.</td>
                   </tr>
                 </tbody>
               </table>
             </article>
           </section>
-          </div>
-        </div>
-      </div>   
-    </main>
-    <aside></aside>
-    <footer class="container-fluid text-center h6 small p-4 blauw fixed-botom">&copy; 2023 4"CAPS"</footer>
+          <hr>
+        </section>
+        <article class="text-center">
+          <h3><a href="#top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+            <p class="text-white">Back to Top</p>
+          </a></h3>
+        </article>
+      </section>
+  </main>
+  <aside></aside>
+  <footer class="text-center h6 small p-4 blauw fixed-botom">&copy;2023 Stefan Cap G_1IOT_D1</footer>
 </body>
 </html>

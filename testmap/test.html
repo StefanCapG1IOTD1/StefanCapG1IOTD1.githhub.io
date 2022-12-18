@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-BE">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport</title>
+    <title>Contact</title>
       <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -13,69 +13,184 @@
   <!-- JavaScript: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
-  <link href="./css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+     <!-- LEAFLET -->
+    <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+      <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+    <link rel="stylesheet" href="../css/map.css">
+    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+    <script src="../js/mapScript.js" defer></script>
 </head>
 <body>
-  <nav class="navbar bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/overzicht.html">Overzicht</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Topics
-              </a>                
+  <header>
+    <nav class="navbar bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/images/4 CAPS.png" alt="4CAPS" width="100" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title blauw" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/overzicht.html">Overzicht</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/pharma.html">Pharma</a></li>
                   <li><a class="dropdown-item" href="/onderwijs.html">Onderwijs</a></li>
                   <li><a class="dropdown-item" href="/industrie.html">Industrie</a></li>
-                  <li><a class="dropdown-item active" aria-current="page" href="/transport.html">Transport</a></li>
+                  <li><a class="dropdown-item" href="/transport.html">Transport</a></li>
                   <li><a class="dropdown-item" href="/archeologie.html">Archeologie</a></li>
                   <li><a class="dropdown-item" href="/space.html">Space</a></li>
                 </ul>
-              <li class="nav-item">
-                <a class="nav-link" href="/faq.html">FAQ</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/contact.html">Contact</a>
+                </li>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <header>
+    </nav>
   </header>
-  <main>
-    <div class="accordion-item">
-
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed text-uppercase fs-6 fw-bolder pt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
-            ${recipe.title}
-            </button>
-          </h2>
-
-          <div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-          <img src="${recipe.image}" class="img-small float-start" alt="${recipe.title}"><span class="h6 mt-2">ingrediënten</span>: ${recipe.ingredients} <hr><span class="h6  mt-2">bereiding</span>: ${recipe.description}</div>
+    <div class="container">
+      <div class="row">
+        <main class="col-md-9 pe-3">
+          <p>&nbsp;</p>
+          <h1 class="col display-2 mt-5 blauw text-center">Let IOT change your world</h1>
+          <section id="contact" class="row">  
+            <article class="col-12 mb-3">
+              <h2 class="text-uppercase fs-4 fw-bolder blauw pt-3">contact</h2>
+              <p>Vul het registratieformulier in.<br>Velden met een <span>*</span> zijn verplicht.</p>
+              <audio controls autoplay hidden>
+                <source src="/music/Rick Astley - Never Gonna Give You Up.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </article>
+            <hr>
+            <section id="contact">
+              <article class="container mt-3 mb-4">
+                <div class="row m-0">
+                  <div class="col-md-12 p-0 pt-3 pb-3">
+                    <form action="#" class="bg-light p-4 m-auto">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="mb-3">
+                            <p>&nbsp;</p>
+                            <h1 class="blauw">Contacteer ons</h1>    
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Wie wilt u contacteren?</option>
+                              <option value="1">Het 4"CAPS"team</option>
+                              <option value="2">Webdesigner</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="mb-3">
+                            <input class="form-control" placeholder="Full Name*" required="" type="text">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="mb-3">
+                            <input class="form-control" placeholder="Email*" required="" type="email">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="mb-3">
+                            <textarea class="form-control" placeholder="Message*" required="" rows="3"></textarea>
+                          </div>
+                          <p><a href="bedankt.html" class="col-md-12 btn btn-primary btn-lg btn-block mt-3">Verzend</a></p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <hr>
+            <form action="#" method="post">
+              <fieldset class="row g-3 mb-3 mt-0">
+                <legend class="text-uppercase fs-6 fw-bolder blauw pt-2">Beoordeling</legend>
+                <div class="col-6">
+                  <label for="brand" class="form-label">en ben fan van <span><strong>rubriek</strong></span></label>
+                  <select id="brand" class="form-select blauw">
+                    <option value="Pharma" selected>Pharma</option>
+                    <option value="Onderwijs">Onderwijs</option>
+                    <option value="Industrie">Industrie</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Archeologie">Archeologie</option>
+                    <option value="Space">Space</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="satisfied" class="form-label">hoe tevreden bent u over <span><strong>4"CAPS"</strong></span>?</label>
+                  <input type="range" class="form-range" min="0" max="10" step="1" id="satisfied">
+                </div>
+              </fieldset>
+              <div class="col-12 mb-3">
+                <button type="submit" class="btn btn-primary">verzenden</button>
+              </div>
+            </form>
+            <hr>
+            <section id="map" class="container mt-4 mb-1 row m-0 col-md-12 p-0 pb-4">      
+              <!-- in de apMap zal er via Leaflet een map ingeladen worden -->
+              <div id="apMap" class="col-md-12 p-0 pb-4">
+              </div>
+            </section>
+          </section>
+          <hr>
+        </main>
+          <aside class="col-md-3 border-start ps-5">
+            <h2 class=" fs-4 fw-bolder blauw pt-3">contact</h2>
+            <p>4"CAPS"<br>
+            <p><strong><em>AP-Student</em></strong><br>email <a href="mailto:s142268@ap.be">s142268@ap.be</a><br>phone: <em>+32 499 66 77 66</em></p></p>
+            <ul class="list-inline socials">
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com" target="_blank">
+                  <i class="bi bi-youtube a:hover fs-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com" target="_blank">
+                  <i class="bi bi-instagram a:hover fs-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com" target="_blank">
+                  <i class="bi bi-facebook a:hover fs-3"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="bi bi-twitter a:hover fs-3"></i>
+                </a>
+              </li>
+            </ul>
+          </aside>
         </div>
-  </div>
-  </main>
+      </div>
+    <aside></aside>
+    <footer class="text-center h6 small p-4 blauw fixed-botom">&copy;2023 Stefan Cap G_1IOT_D1</footer>   
+  </body>
+</html>
